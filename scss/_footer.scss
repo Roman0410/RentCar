@@ -1,0 +1,64 @@
+.footer {
+  display: flex;
+  @media screen and (max-width: 990px) {
+    flex-direction: column;
+    width: 100%;
+  }
+  .left {
+    width: 50%;
+    background-color: #212121;
+    @media screen and (max-width: 990px) {
+      width: 100%;
+    }
+  }
+  .card {
+    padding: 32px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer-nav {
+    display: flex;
+    gap: 16px;
+    @media screen and (max-width: 500px) {
+      flex-direction: column;
+      align-items: center;
+      gap: 7px;
+    }
+  }
+  .footer-nav-link {
+    font-size: 20px;
+    color: #7e7e7e;
+    transition: all 0.2s linear;
+    &.current {
+      color: var(--accent-color);
+    }
+    &:hover,
+    &:focus {
+      color: var(--accent-color);
+    }
+  }
+  .soc-list {
+    margin: 32px 0;
+    display: flex !important;
+    gap: 10px;
+  }
+  .logo {
+    margin-bottom: 5px;
+    color: #fff;
+  }
+  .text {
+    max-width: 343px;
+    text-align: center;
+  }
+  .copyright {
+    margin-bottom: 32px;
+  }
+  .rigth {
+    width: 50%;
+    @media screen and (max-width: 990px) {
+      width: 100%;
+      height: 297px;
+    }
+  }
+}
