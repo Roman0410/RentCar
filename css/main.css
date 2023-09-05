@@ -1,3 +1,4 @@
+@charset "UTF-8";
 *,
 ::before,
 ::after {
@@ -58,6 +59,7 @@ img {
   color: #fff;
   padding: 16px;
   background-color: var(--accent-color);
+  text-align: center;
 }
 button {
   border: none;
@@ -548,6 +550,494 @@ header {
 :root {
   --accent-color: #ff730f;
   --background: #f5f5f5;
+}
+
+.slider {
+  position: relative;
+}
+
+.arrows {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto;
+}
+.arrows .button {
+  background-color: #000;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 16px;
+  cursor: pointer;
+  -webkit-transition: all 0.1s linear;
+  transition: all 0.1s linear;
+}
+.arrows .button:active {
+  -webkit-transform: scale(0.98);
+          transform: scale(0.98);
+}
+.arrows .prev {
+  background-color: #fff;
+}
+.arrows .next {
+  background-color: var(--accent-color);
+}
+
+/* Слайдер */
+/* Слайдер запущен */
+/* Слайдер с точками */
+/* Ограничивающая оболочка */
+.slick-list {
+  overflow: hidden;
+}
+
+/* Лента слайдов */
+.slick-track {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+/* Слайд */
+/* Слайд активный (показывается) */
+/* Слайд основной */
+/* Слайд по центру */
+/* Клонированный слайд */
+/* Стрелка */
+/* Стрелка влево */
+/* Стрелка вправо */
+/* Стрелка не активная */
+.slick-dots {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  -webkit-transform: translatex(-50%);
+          transform: translatex(-50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 16px;
+}
+
+.slick-dots button {
+  display: block;
+  border-radius: 50%;
+  background-color: #dddbdb;
+  font-size: 0;
+  width: 8px;
+  height: 8px;
+  padding: 0;
+}
+
+/* Активная точка */
+.slick-dots li.slick-active button {
+  background-color: var(--accent-color);
+}
+
+/* Элемент точки */
+.home-hero {
+  height: calc(100vh - 86px);
+  position: relative;
+}
+.home-hero .hero-slider {
+  height: 100%;
+}
+.home-hero .hero-slider .slick-list {
+  height: 100%;
+  background-color: rgb(0, 0, 0);
+}
+.home-hero .hero-slider .slick-track {
+  height: 100%;
+  -webkit-transition: all 1s cubic-bezier(0.7, 0, 0.3, 1);
+  transition: all 1s cubic-bezier(0.7, 0, 0.3, 1);
+}
+.home-hero .hero-slider .hero-slide img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transition: all 1s cubic-bezier(0.7, 0, 0.3, 1);
+  transition: all 1s cubic-bezier(0.7, 0, 0.3, 1);
+}
+.home-hero .hero-slider .hero-slide.slick-active img {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  animation: cssAnimation 5s 1 ease-in-out reverse;
+}
+.home-hero .container {
+  position: absolute;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  max-width: 100%;
+  height: 100%;
+}
+.home-hero .container .card {
+  max-width: 375px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 16px;
+  height: 100%;
+}
+.home-hero .container .section-subtitle {
+  color: #fff;
+}
+.home-hero .container .section-title {
+  text-align: center;
+  color: #fff;
+}
+.home-hero .container .text {
+  text-align: center;
+  color: #fff;
+}
+.home-hero .container .btn {
+  width: 50%;
+}
+@-webkit-keyframes cssAnimation {
+  from {
+    -webkit-transform: scale(1) translate(0px);
+  }
+  to {
+    -webkit-transform: scale(1.08) translate(0px);
+  }
+}
+@keyframes cssAnimation {
+  from {
+    -webkit-transform: scale(1) translate(0px);
+  }
+  to {
+    -webkit-transform: scale(1.08) translate(0px);
+  }
+}
+.advantages {
+  background-color: #212121;
+}
+.advantages .container {
+  max-width: 100%;
+}
+.advantages .range-desctop {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+@media screen and (max-width: 768px) {
+  .advantages .range-desctop {
+    display: none;
+  }
+}
+.advantages .range-desctop .filters {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 35%;
+}
+.advantages .range-mobile {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .advantages .range-mobile {
+    display: block;
+  }
+}
+.advantages .range-mobile .filters {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 16px;
+}
+.advantages .range-mobile .filter-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 16px;
+  padding: 0;
+  background-color: transparent;
+  gap: 0;
+  background-color: #212121;
+}
+.advantages .range-mobile .filter-item.current {
+  background-color: #fff;
+}
+.advantages .range-mobile .filter-item .filter-name {
+  padding: 16px;
+}
+.advantages .range-mobile .filter-item .info {
+  height: 250px;
+}
+.advantages .filter-item {
+  padding: 16px;
+  background-color: #212121;
+  color: #fff;
+  cursor: pointer;
+}
+.advantages .filter-item .card-title {
+  color: #7e7e7e;
+}
+.advantages .filter-item img {
+  width: 56px;
+}
+.advantages .current {
+  background-color: #fff;
+}
+.advantages .current .card-title {
+  color: #000;
+}
+.advantages .about {
+  width: 65%;
+}
+.advantages .info {
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.advantages .hide {
+  display: none;
+}
+
+.cars {
+  background-color: var(--background);
+}
+.cars .container {
+  max-width: 100%;
+  padding: 32px;
+}
+@media screen and (max-width: 650px) {
+  .cars .container {
+    padding: 0;
+  }
+}
+.cars .cars-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 16px;
+}
+.cars .car-item {
+  width: calc((100% - 48px) / 3);
+  background-color: #fff;
+}
+.cars .car-item img:not(.charact-list img) {
+  width: 100%;
+  height: 250px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media screen and (max-width: 1024px) {
+  .cars .car-item {
+    width: calc((100% - 16px) / 2);
+  }
+}
+@media screen and (max-width: 650px) {
+  .cars .car-item {
+    width: 100%;
+  }
+}
+.cars .card {
+  padding: 16px;
+}
+.cars .card .section-title {
+  text-align: center;
+}
+.cars .card .charact-list {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.cars .arrows {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 16px;
+}
+.cars .arrows .btn {
+  background-color: #fff;
+  color: #646464;
+  padding: 10px;
+  width: 50%;
+}
+@media screen and (min-width: 650px) {
+  .cars .arrows {
+    display: none;
+  }
+}
+
+.anout-prew {
+  background-size: cover;
+  background-position: center;
+  padding: 50px 16px;
+}
+.anout-prew .card {
+  max-width: 343px;
+  margin: 0 auto;
+}
+.anout-prew .section-title {
+  text-align: center;
+  color: #fff;
+}
+.anout-prew .text {
+  text-align: center;
+  color: #fff;
+}
+.anout-prew .btn {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
+}
+
+.process .container {
+  max-width: 100%;
+  padding: 32px 16px;
+}
+.process .section-subtitle {
+  text-align: center;
+  margin-bottom: 16px;
+  color: #212121;
+}
+.process .pocess-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+}
+.process .item {
+  width: calc((100% - 96px) / 7);
+  min-height: 231px;
+}
+.process .process-item img {
+  width: 36px;
+  margin: 0 auto;
+}
+.process .section-title {
+  color: var(--accent-color);
+  text-align: center;
+}
+.process .text {
+  text-align: center;
+}
+.process .process-num {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.process .process-num .num {
+  color: var(--accent-color);
+  font-size: 20px;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.want-rent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.want-rent .left {
+  width: 50%;
+  background-position: center;
+}
+.want-rent .right {
+  width: 50%;
+  background-color: var(--accent-color);
+  padding: 50px 16px;
+}
+.want-rent .card {
+  max-width: 344px;
+  margin: auto;
+}
+.want-rent .section-subtitle {
+  text-align: center;
+  color: #fff;
+}
+.want-rent .section-title {
+  color: #fff;
+  text-align: center;
+}
+.want-rent .text {
+  color: #fff;
+  text-align: center;
+}
+.want-rent .actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+}
+.want-rent .btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #fff;
+  color: #000;
+  width: 100%;
 }
 
 .hero {
