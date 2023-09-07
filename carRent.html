@@ -12,6 +12,10 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
+    />
   </head>
   <body>
     <header class="header">
@@ -53,11 +57,6 @@
               <li class="nav-item">
                 <a href="gallery.html" class="nav-link">Gallery</a>
               </li>
-
-              <li class="nav-item">
-                <a href="blog.html" class="nav-link">Blog</a>
-              </li>
-
               <li class="nav-item">
                 <a href="contact.html" class="nav-link">Contacts</a>
               </li>
@@ -660,6 +659,66 @@
             </div>
           </li>
         </ul>
+      </div>
+    </section>
+    <section class="contacts">
+      <div class="conatiner column">
+        <p class="section-subtitle">Contact us</p>
+        <h2 class="section-title">Frequently asked questions</h2>
+        <div class="conatact-list">
+          <div class="contact-item">
+            <div class="icon">
+              <img src="./img/tel.svg" alt="" />
+            </div>
+            <div class="info">
+              <p class="text">Phone:</p>
+              <a href="tel:5072812064">507-281-2064</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="icon">
+              <img src="./img/mail.svg" alt="" />
+            </div>
+            <div class="info">
+              <p class="text">Email:</p>
+              <a href="mailto:rentcar@gmail.com">rentcar@gmail.com</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="icon">
+              <img src="./img/location.svg" alt="" />
+            </div>
+            <div class="info">
+              <p class="text">Location:</p>
+              <a href="https://goo.gl/maps/gZP2fgF9qwb8cziv5"
+                >14200 S Las Vegas Blvd Las Vegas NV 89054</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="form">
+          <form action="" id="main-form" class="form">
+            <div class="col-1">
+              <input
+                type="text"
+                placeholder="Your name"
+                name="fname"
+                required
+              />
+              <input
+                type="tel"
+                placeholder="Phone number"
+                name="phone"
+                required
+              />
+              <input type="email" name="email" placeholder="Email" />
+            </div>
+            <div class="col2">
+              <textarea placeholder="Message"></textarea>
+              <button class="btn" type="submit">Send</button>
+            </div>
+          </form>
+        </div>
       </div>
     </section>
     <footer class="footer">

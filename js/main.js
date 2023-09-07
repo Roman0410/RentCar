@@ -1,3 +1,7 @@
+Fancybox.bind("[data-fancybox]", {
+  // Your custom options
+});
+
 $(".header-burger").click(function (event) {
   $(".header-nav").toggleClass("active");
   $(".header-burger").toggleClass("active");
@@ -26,6 +30,11 @@ $(".filter-name").click(function (event) {
   let wiki = $(".advantages");
   $(this).closest(wiki).find(".filter-name").removeClass("current");
   $(this).addClass("current");
+});
+
+$(".faq-top").click(function (event) {
+  $(this).toggleClass("open");
+  $(this).closest(".faq-item").find(".answer").toggleClass("open");
 });
 
 $("[data-filter]").on("click", function () {
