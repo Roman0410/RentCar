@@ -644,3 +644,24 @@
     text-align: center;
   }
 }
+.rentDetails {
+  .container {
+    max-width: 100%;
+    padding: 32px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .section-title {
+  }
+  .text {
+  }
+  .charact-list {
+    flex-direction: column;
+  }
+  .btn {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+}

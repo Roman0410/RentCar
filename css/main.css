@@ -1608,6 +1608,30 @@ header {
   text-align: center;
 }
 
+.rentDetails .container {
+  max-width: 100%;
+  padding: 32px 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 16px;
+}
+.rentDetails .charact-list {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.rentDetails .btn {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
 .hero {
   background-position: center;
   background-size: cover;
