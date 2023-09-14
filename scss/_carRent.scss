@@ -30,15 +30,35 @@
   .info-btn {
     display: flex;
     gap: 16px;
+    max-width: 350px;
     .btn {
       display: flex;
       justify-content: center;
       gap: 7px;
       width: 100%;
     }
-    .gallery {
-      background-color: #fff;
-      color: #000;
+    .gallery-btn-open {
+      position: relative;
+      width: 100%;
+
+      p {
+        height: 53px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding-right: 16px;
+        width: 100%;
+        background-color: #fff;
+        white-space: nowrap;
+        cursor: pointer;
+      }
+      img {
+        position: absolute;
+        left: 16px;
+        top: 50%;
+        transform: translateY(-50%);
+        pointer-events: none;
+      }
     }
   }
 
